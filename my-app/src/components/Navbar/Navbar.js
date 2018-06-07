@@ -2,13 +2,19 @@ import React from "react";
 import "./Navbar.css";
 
 const Navbar = props => (
-    <div>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="#">NBA Finals Clicky Game</a>
-      </div>
-    </nav>
-    </div>
+  <nav>
+    <ul>
+      <li className="sticky brand animated lightSpeedIn">
+        <a href="/clicky-game/">NBA Finals Clicky Game</a>
+      </li>
+
+      <li id="rw">{props.rightWrong}</li>
+
+      <li id="cur-sco">Current Score: {props.score}</li>
+
+      <li id="top-sco">Top Score: {props.topScore}</li>
+    </ul>
+  </nav>
 );
 
 export default Navbar;

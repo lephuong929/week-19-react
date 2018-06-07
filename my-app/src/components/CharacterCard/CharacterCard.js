@@ -4,7 +4,9 @@ import "./CharacterCard.css";
 const CharacterCard = props => (
   <div className="card">
     <div className="img-container">
-      <img alt={props.name} src={props.image} />
+      <a onClick={() => props.handleClick(props.id)} className={props.curScore === 0 ? "style_prevu_kit style_prevu_kit_ex" : "style_prevu_kit"}>
+        <img alt={props.name} src={props.image} />
+      </a>
     </div>
   </div>
 );
